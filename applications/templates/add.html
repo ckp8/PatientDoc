@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 {% block body %}
-<h1> Create or update appointment</h1>
+<h1> Create appointment</h1>
 <div class = "form">
-<form method = 'GET' action = ''>
+<form method = 'POST' action = ''>
   {{ form.hidden_tag() }}
   {{ form.first_name.label }} {{ form.first_name }}
   <br>
- 
+  {{ form.date.label }} {{ form.date }}
   <br>
   {{ form.last_name.label }} {{ form.last_name }}
   <br>
