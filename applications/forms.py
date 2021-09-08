@@ -15,6 +15,13 @@ class CreateAppt(FlaskForm):
       date = StringField("choose date")
 
       submit = SubmitField('add Appointment')
+    
+class CancelAppt(FlaskForm):
+      uniqueID = StringField("enter id")
+      date = StringField("choose date")
+
+      submit = SubmitField('cancel Appointment')
+
 
 
    
