@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for
 from applications import app, db
 from flask import Flask
 from applications.forms import BasicForm
+from applications.models import Patients
 
 @app.route('/')
 @app.route('/home')
@@ -13,17 +14,17 @@ def create():
     message = ""
     form = BasicForm()
     if request.method == 'POST':
-        first_name = form.first_name.data
-        last_name = form.last_name.data
-        dob = form.dob.data
+        info = Patients(first_name = form.first_name.data,
+        last_name = form.last_name.data)
+       
         
-        db.session.add(form)
+        # dob = form.dob.data
+        
+        db.session.add(info)
         db.session.commit()
         
-        if len(first_name) == 0 or len(last_name) == 0:
-            message = "Please enter name"
-        else:
-            message = f'Thank you, {first_name} {last_name} for booking an appointment on the {dob}'
+        
+       
     return render_template('create.html', form = form, message = message)
 
 @app.route ('/view')

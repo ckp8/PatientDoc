@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired
 class BasicForm(FlaskForm):
     first_name = StringField('First Name')
     last_name = StringField('Last Name')
-    dob = StringField ("choose date")
+    # dob = StringField ("choose date")
 
-    submit = SubmitField('Add Name')
+    submit = SubmitField('Add Appointment')
+   
