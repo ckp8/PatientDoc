@@ -11,8 +11,7 @@ class BasicForm(FlaskForm):
     submit = SubmitField('register')
 
 class CreateAppt(FlaskForm):
-      first_name = StringField('First Name')
-      last_name = StringField('Last Name')
+      uniqueID = StringField("enter id")
       date = StringField("choose date")
 
       submit = SubmitField('add Appointment')
