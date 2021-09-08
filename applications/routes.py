@@ -71,17 +71,35 @@ def add():
            return "you need to register"
     return render_template('add.html',form=form)
 
-@app.route ('/views')
-def views():
-    all_appt = Appointment.query.all()
-    appt_string = ""
-    for appt in all_appt:
-        appt_string += "<br>"+ str(appt.patient_id) + appt.date
-    return appt_string
+@app.route ('/cancel',methods = ['GET','POST'])
+def cancel():
+    form = CreateAppt()
+    if request.method == 'POST':
 
-  
+        appt = Appointment(patient_id = form.uniqueID.data,
+        
+        date = form.date.data)
 
         
+        
+       
+        exists = db.session.query(Patients.id).filter_by(id=form.uniqueID.data).first() is not None
+
+        if exists:
+
+           
 
 
-    return render_template("add.html", form = form)
+        
+       
+        
+        # dob = form.dob.data
+        
+          db.session.delete(appt)
+          db.session.commit()
+        else:
+
+           return "you arent booked in that date"
+
+
+    return render_template("cancel.html", form = form)
