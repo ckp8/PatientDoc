@@ -1,16 +1,18 @@
+import pytest
+import flask 
 from flask_testing import TestCase
 from applications import app, db
-from applications.models import Questions, Options
+from applications.models import *
+from applications.routes import *
 
-
-class TestBase(TestCase):
+class TestBase(TestCase) :
     def create_app(self):
 
         # Pass in testing configurations for the app.
         app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///Patientdata.db",
                 SECRET_KEY='TEST_SECRET_KEY',
                 DEBUG=True,
-                WTF_CSRF_ENABLED=False
+                # WTF_CSRF_ENABLED=False
                 )
         return app
 
@@ -29,7 +31,7 @@ class TestBase(TestCase):
   
   
     def tearDown(self):
-        db.sessin.remove()
+        db.session.remove()
         db.drop_all()
 class TestViews(TestBase):
 
@@ -38,7 +40,7 @@ class TestViews(TestBase):
         self.assertEqual(response.status_code,200)
 
     def test_cancel(self):
-        response = self.client.get(url_for('about'))
+        response = self.client.get(url_for('create'))
         self.assertEqual(response.status_code,200)
 
     

@@ -1,4 +1,3 @@
-from html.entities import html5
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 import os
@@ -14,4 +13,3 @@ app.config['SECRET_KEY'] = SECRET_KEY
 db = SQLAlchemy(app)
 
 from applications import routes
-
