@@ -109,11 +109,12 @@ def update():
         exists = db.session.query(Appointment.patient_id).filter_by(patient_id=form.uniqueID.data).first() is not None
         print (exists)
         if exists:
-            print ("exists")    
-            db.session.query(Appointment.patient_id).filter(Appointment.patient_id == form.uniqueID.data).update({'date': form.date.data})
+            print ("exists")  
+            Appointment.query.filter_by(patient_id=form.uniqueID.data).update({'date': form.date.data})  
+            # db.session.query(Appointment.patient_id).filter(Appointment.patient_id == form.uniqueID.data).update({'date': form.date.data})
             db.session.commit()
             msg ="updated successfully"
-    return render_template('update.html',form=form, message=msg)
+    return render_template('add.html',form=form, message=msg)
 
 
 @app.route ('/views')
