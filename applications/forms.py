@@ -4,21 +4,21 @@ from wtforms.validators import DataRequired
 
 
 class BasicForm(FlaskForm):
-    first_name = StringField('First Name')
-    last_name = StringField('Last Name')
-    dob = StringField("choose date")
+    first_name = StringField('First Name',validators=[DataRequired(message = "enter a name")])
+    last_name = StringField('Last Name',validators=[DataRequired(message = "enter a name")])
+    dob = StringField("choose date",validators=[DataRequired(message = "enter a name")])
 
     submit = SubmitField('register')
 
 class CreateAppt(FlaskForm):
-      uniqueID = StringField("enter id")
+      uniqueID = StringField("enter id",validators=[DataRequired(message = "enter your uniqueID")])
       date = StringField("choose date")
 
       submit = SubmitField('add Appointment')
     
 class CancelAppt(FlaskForm):
-      uniqueID = StringField("enter id")
-      date = StringField("choose date")
+      uniqueID = StringField("enter id",validators=[DataRequired(message = "enter a uniqueID")])
+      date = StringField("choose date",validators=[DataRequired(message = "enter a the date")])
 
       submit = SubmitField('cancel Appointment')
 

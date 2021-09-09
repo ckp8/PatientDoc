@@ -75,10 +75,10 @@ def add():
 def cancel():
     form = CancelAppt()
     if request.method == 'POST':
-        exists = db.session.query(Appointment.id).filter_by(id=form.uniqueID.data, date=form.date.data).first() is not None
+        exists = db.session.query(Appointment.patient_id).filter_by(patient_id=form.uniqueID.data, date=form.date.data).first() is not None
         msg = ""
         if exists:
-            Appointment.query.filter_by(id=form.uniqueID.data, date=form.date.data).delete()
+            Appointment.query.filter_by(patient_id=form.uniqueID.data, date=form.date.data).delete()
             db.session.commit()
             msg ="deleted successfully"
 
@@ -86,7 +86,21 @@ def cancel():
     return render_template('cancel.html',form=form)
 
 
-@app.route('/update', methods = ['GET','POST'])
+# @app.route('/update', methods = ['GET','POST'])
+# @app.route('/update', methods = ['GET','POST'])
+# def update():
+#     msg = ''
+#     form = CreateAppt()
+#     if request.method == 'POST':
+#         exists = db.session.query(Appointment.patient_id).filter_by(patient_id=form.uniqueID.data).first() is not None
+#         print (exists)
+#         if exists:
+#             print ("exists")    
+#             db.session.query(Appointment.patient_id).filter(Appointment.patient_id == form.uniqueID.data).update({'date': form.date.data})
+#             db.session.commit()
+#             msg ="updated successfully"
+#     return render_template('update.html',form=form, message=msg)
+
 @app.route('/update', methods = ['GET','POST'])
 def update():
     msg = ''
@@ -96,7 +110,7 @@ def update():
         print (exists)
         if exists:
             print ("exists")    
-            db.session.query(Appointment).filter(Appointment.patient_id == form.uniqueID.data).update({'date': form.date.data})
+            db.session.query(Appointment.patient_id).filter(Appointment.patient_id == form.uniqueID.data).update({'date': form.date.data})
             db.session.commit()
             msg ="updated successfully"
     return render_template('update.html',form=form, message=msg)
