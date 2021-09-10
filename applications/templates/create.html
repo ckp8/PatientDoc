@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1> Create or update appointment</h1>
+<div class = "form">
+<form method = 'POST' action = ''>
+  {{ form.hidden_tag() }}
+  {{ form.first_name.label }} {{ form.first_name }}
+  <br>
+  {{ form.dob.label }} {{ form.dob }}
+  <br>
+  {{ form.last_name.label }} {{ form.last_name }}
+  <br>
+  {{ form.submit }}
+  <br>
+{{ message }}
+  </form>
+</div>
+  {% endblock body %}
