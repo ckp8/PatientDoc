@@ -13,11 +13,11 @@ The project brief required us to design and develop a web application of our cho
 
 ## The built application
 To fulfull the requirements, I produced an application which allows users to create/delete/update and view their appointments. One patient can have many appointments (one to many relationship
-• The user will  be able to
-••register using their name and date of birth
-••Make an appointment
-•• delete an appointment
-•• update an appointment
+• The user will  be able to <br>
+••register using their name and date of birth <br>
+••Make an appointment <br>
+•• delete an appointment <br>
+•• update an appointment <br>
 
 # Architecture
 ## The Database
