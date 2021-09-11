@@ -32,3 +32,8 @@ In addition to the above requirements, the project required the implementation o
 
 
 Above you can see my trello board mid-week. I have assigned story points to each of my user stories, in regards to how difficult each task may be relative to eachother.
+
+
+
+
+For version control, I used git. The project reposistory was hosted on github.Version control via git allows changes to the project to be made and committed whilst keeping the commit history for access to earlier version. Github also allows the use of  webhooks which sends POST http requests to the build server to automate tests and build.
