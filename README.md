@@ -22,6 +22,8 @@ To fulfull the requirements, I produced an application which allows users to cre
 # Architecture
 ## The Database
 ![Screenshot 2021-09-11 at 19 56 42](https://user-images.githubusercontent.com/43785332/132958487-d4217d1d-1bba-461c-890e-62e8ad81f678.png)
+
+
 As seen above, I have implemented 2 tables which share a one to many relationship. Which allow users to make an appointment (create functionality), change their appointment (update functionality), view their appointments(read functionality), and cancel their appointments (delete functionality). The database for this MVP for this project comprimises of a patients table and an appointments table. With each patient having multiple appointments (one-to-many relationship)
 
 
