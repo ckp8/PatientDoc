@@ -24,6 +24,11 @@ To fulfull the requirements, I produced an application which allows users to cre
 ![Screenshot 2021-09-11 at 19 56 42](https://user-images.githubusercontent.com/43785332/132958487-d4217d1d-1bba-461c-890e-62e8ad81f678.png)
 
 
-As seen above, I have implemented 2 tables which share a one to many relationship. The application allows users to make an appointment (create functionality), change their appointment (update functionality), view their appointment(read functionality), and cancel their appointments (delete functionality). The database for the MVP for this project comprimises of a patients table and an appointments table. With each patient having multiple appointments (one-to-many relationship)
+As seen above, I have implemented 2 tables which share a one to many relationship. The application allows users to make an appointment (create functionality), change their appointment (update functionality), view their appointment(read functionality), and cancel their appointments (delete functionality). The database for the MVP for this project comprimises of a patients table and  appointments table. With each patient having multiple appointments (one-to-many relationship)
+
+# CI Pipeline 
+In addition to the above requirements, the project required the implementation of several stages of a typical CI pipeline. Such as project tracking, development environment and build server and version control. To track my project I used a trello board where I priortised each task using the MoSCoW prioritisation.
+![Screenshot 2021-09-11 at 20 44 16](https://user-images.githubusercontent.com/43785332/132959705-9f67b99c-3c42-492e-891b-b036a9d483ff.png)
 
 
+Above you can see my trello board mid-week. I have assigned story points to each of my user stories, in regards to how difficult each task may be relative to eachother.
