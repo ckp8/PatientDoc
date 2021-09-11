@@ -21,3 +21,5 @@ To fulfull the requirements, I produced an application which allows users to cre
 
 # Architecture
 ## The Database
+![Screenshot 2021-09-11 at 19 43 43-1](https://user-images.githubusercontent.com/43785332/132958442-ddba550a-6a19-4331-b901-fc671ab5f48f.png)
+
