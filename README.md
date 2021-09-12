@@ -83,8 +83,8 @@ There are a number of improvements I would like to implement to improve this app
 
 • Implementation of a login and authentication system. This will allow for greater security <br>
 • Make the front-end more aesthetically pleasing, by using bootstrap and css <br>
-• ![48cd9d52-ccd1-425c-86b3-636eb32ad879](https://user-images.githubusercontent.com/43785332/132998836-3878098c-28cc-413d-b6e6-74511908cb01.jpg)
-To make this app more functional, I would implement more relations and database tables.
+• ![48cd9d52-ccd1-425c-86b3-636eb32ad879](https://user-images.githubusercontent.com/43785332/132998836-3878098c-28cc-413d-b6e6-74511908cb01.jpg)<br>
+To make this app more functional, I would implement more relations and database tables.<br>
 • Having a online chat system, for users experiencing problems
 
 
