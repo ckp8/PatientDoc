@@ -37,3 +37,15 @@ Above you can see my trello board mid-week. I have assigned story points to each
 
 
 For version control, I used git. The project reposistory was hosted on github.Version control via git allows changes to the project to be made and committed whilst keeping the commit history for access to earlier version. Github also allows the use of  webhooks which sends POST http requests to the build server to automate tests and build.
+
+I used development environment used was Python virtual environment (venv). I used Flask which required me to use Python as flask is python-based. I used Python virtual environment as it allows for pip installs, as well as allowing the app to be run without any conflict with pip installs on the same machone
+
+# Testing
+Pytest was used to run the unit tests on this application. With unit testing you are required to test small 'units' of code, with a known output. 
+• Unit tests were written for the key functionalties such as "Read','Write','Update and 'Delete', As well as some html pages to much sure they were rendering back the templates. I used jenkins to automate the unit tests via webhooks <br>
+• Intergation testing tests the function of the app in an live environment.
+
+![Screenshot 2021-09-12 at 17 55 35](https://user-images.githubusercontent.com/43785332/132996474-89fdf820-4865-455f-8add-f3ccdcacf92f.png)
+
+
+The coverage report highlights the percentage of tests covered.All tests must pass for the build to be successful otherwise the build will fail.
