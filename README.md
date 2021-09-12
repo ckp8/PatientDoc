@@ -49,3 +49,47 @@ Pytest was used to run the unit tests on this application. With unit testing you
 
 
 The coverage report highlights the percentage of tests covered.All tests must pass for the build to be successful otherwise the build will fail.
+
+# Risk Assessment.
+Some of the  measures were implemented in the project following the risk assessment.
+• Users were not asked any sensitive data <br>
+• regular pushes to github in case the VM goes down <br>
+![Screenshot 2021-09-12 at 19 13 12](https://user-images.githubusercontent.com/43785332/132998263-ad2ac8fd-677b-418d-a319-a415051cc55f.png)
+
+
+Here is a image of a risk assessment which was carried out at the start of the project.
+
+# The App
+
+![Screenshot 2021-09-12 at 19 16 44](https://user-images.githubusercontent.com/43785332/132998399-5f975050-15c0-4135-90c9-8041cfa9e18c.png)
+
+The image above displays a easy to read and navigate homepage. Where the user will be able to either register/create appointment or delete and update an appointment.
+
+![Screenshot 2021-09-12 at 19 16 53](https://user-images.githubusercontent.com/43785332/132998474-1c870b36-24df-4f36-b6d3-857f8dcb777c.png)
+
+Before a user will be allowed to create an appointment, they will have to create an account and be registered at the "GP practice".
+
+Once this has been done, the user will be able to create an appointment entering in their unique user ID which they will be able to retrieve on the views page.
+
+
+![Screenshot 2021-09-12 at 19 17 02](https://user-images.githubusercontent.com/43785332/132998546-9dccd6a5-88c9-4b13-9b86-6882753c177d.png)
+
+
+Using this ID the user will also be able to update and delete their appointment. Every user will be given a unique ID.
+
+# Future Improvements
+
+There are a number of improvements I would like to implement to improve this application.
+
+• Implementation of a login and authentication system. This will allow for greater security <br>
+• Make the front-end more aesthetically pleasing, by using bootstrap and css <br>
+• ![48cd9d52-ccd1-425c-86b3-636eb32ad879](https://user-images.githubusercontent.com/43785332/132998836-3878098c-28cc-413d-b6e6-74511908cb01.jpg)
+To make this app more functional, I would implement more relations and database tables.
+• Having a online chat system, for users experiencing problems
+
+
+
+
+
+
+
