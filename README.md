@@ -49,7 +49,8 @@ Pytest was used to run the unit tests on this application. With unit testing you
 • Unit tests were written for the key functionalties such as "Read','Write','Update and 'Delete', As well as some html pages to much sure they were rendering back the templates. I used jenkins to automate the unit tests via webhooks <br>
 • Intergation testing tests the function of the app in an live environment.
 
-![Screenshot 2021-09-12 at 17 55 35](https://user-images.githubusercontent.com/43785332/132996474-89fdf820-4865-455f-8add-f3ccdcacf92f.png)
+![Screenshot 2021-09-13 at 08 46 43](https://user-images.githubusercontent.com/43785332/133044318-5acae765-eb64-47cf-9881-31fd76b075cb.png)
+
 
 
 The coverage report highlights the percentage of tests covered.All tests must pass for the build to be successful otherwise the build will fail.
