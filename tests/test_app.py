@@ -1,3 +1,4 @@
+
 import pytest
 import flask 
 from flask_testing import TestCase
@@ -40,13 +41,55 @@ class TestViews(TestBase):
         self.assertEqual(response.status_code,200)
 
     def test_cancel(self):
+        response = self.client.get(url_for('cancel'))
+        self.assertEqual(response.status_code,200)
+    
+    def test_create(self):
         response = self.client.get(url_for('create'))
         self.assertEqual(response.status_code,200)
-
     
+    def test_update(self):
+        response = self.client.get(url_for('update'))
+        self.assertEqual(response.status_code,200)
+
+    def test_view(self):
+        response = self.client.get(url_for('view'))
+        self.assertEqual(response.status_code,200)
     
+    def test_views(self):
+        response = self.client.get(url_for('views'))
+        self.assertEqual(response.status_code,200)
+
+    def test_home_get(self):
 
 
+         response = self.client.get(url_for('home')) # send a GET request
+         self.assertEqual(response.status_code, 200) # assert that the response code is 200
+         self.assertIn(b"welcome to charanjit's practice", response.data)
+
+    def test_update_get(self):
+
+
+         response = self.client.get(url_for('cancel')) # send a GET request
+         self.assertEqual(response.status_code, 200) # assert that the response code is 200
+         self.assertIn(b"Cancel appointment", response.data)
+
+class TestDelq(TestBase):
+    def test_delete(self):
+        response = self.client.get(url_for('cancel', patient_id = 1), follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'delete', response.data)
+class TestUpdate(TestBase):
+    def test_update(self):
+        response = self.client.post(url_for('update', patient_id = 1), 
+        data = dict(date = '29/11/2021',msg = "updated successfully"),
+        follow_redirects=True
+        )
+        self.assertIn(b'update',response.data)
+class TestViews(TestBase):
+
+     def test_views(self):
+class TestCreate(TestBase):
 
 
 
