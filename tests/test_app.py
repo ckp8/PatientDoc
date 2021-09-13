@@ -89,7 +89,7 @@ class TestUpdate(TestBase):
 class TestViews(TestBase):
 
      def test_views(self):
-class TestCreate(TestBase):
+
 
 
 
