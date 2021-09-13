@@ -33,7 +33,11 @@ In addition to the above requirements, the project required the implementation o
 
 Above you can see my trello board mid-week. I have assigned story points to each of my user stories, in regards to how difficult each task may be relative to eachother.
 
-
+* user stories - Any functionality which is added to the project starts out as a user story. This helps keep every element of software development focused on user experience <br>
+* Project Backlog -  The list of tasks required to do to complete this project <br>
+* Sprint backlog - set of tasks to complete in a given sprint. <br>
+* In progress- current set of tasks being worked on <br>
+* completed - the code and functionalites being completed.(DoD - acceptance criteria met, unit tests passed) <br>
 
 
 For version control, I used git. The project reposistory was hosted on github.Version control via git allows changes to the project to be made and committed whilst keeping the commit history for access to earlier version. Github also allows the use of  webhooks which sends POST http requests to the build server to automate tests and build.
