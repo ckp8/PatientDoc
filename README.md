@@ -63,6 +63,7 @@ Some of the  measures were implemented in the project following the risk assessm
 
 
 Here is a image of a risk assessment which was carried out at the start of the project.
+• risk of jenkins going down is low, but the severity of harm would be high
 
 # The App
 
