@@ -86,9 +86,6 @@ class TestUpdate(TestBase):
         follow_redirects=True
         )
         self.assertIn(b'update',response.data)
-class TestViews(TestBase):
-
-     def test_views(self):
 
 
 
